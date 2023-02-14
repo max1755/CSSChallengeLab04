@@ -1,0 +1,121 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+
+*{
+    color:#f0E7D8;
+    text-shadow:1px 1px #333;
+}
+
+h1{
+    font-family: 'Inconsolata',monospace;
+    font-size: 10vh;
+    color: #fff;
+    text-shadow: 2px 2px #333;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+h2,
+h3{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    font-size: 1.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    margin: 20px;
+}
+
+p{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: right;
+    margin-top:1em;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+figure > cite {
+    display:block;
+    margin-right: 2em;
+    margin-bottom: 1em;
+}
+
+/*Image size is changed to be responsive*/
+
+figure > img {
+    width:30vw;
+    height:auto;  
+}
+
+/*Wrapper and wrapper size*/
+
+.wrapper{
+    background-image:linear-gradient(#121268, #B3C2F2, #121268);/*A gradient is like a nicer color*/
+    width: 80vw; /*This should be 80% of the viewport width*/
+    margin: 0 auto;
+    border: solid #000 3px;
+    border-radius: 6px;
+}
+
+ul > li:nth-child(odd){
+    font-weight: bold;
+}
+
+figure > cite > a:hover{
+    color: darkblue;
+}
+
+/*Background Image And Header position*/
+
+header {
+    width:90%;
+    background-image: url(../images/background.png);
+    background-attachment: fixed;
+	background-position: center;
+    margin-left: 5%;
+}
+
+/*Image Manipulation*/
+
+/*Applying filters to the same elements causes one to over write the other
+So filter one is on 'figure' and filter two is on 'img' and it seems to
+apply both*/
+
+figure {
+    filter:hue-rotate(180deg);
+}
+
+img {
+    filter: drop-shadow(20px 0px 5px);
+}
+
+
+
